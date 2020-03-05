@@ -22,11 +22,19 @@ int max_device_name_length(pcap_if_t *devices) {
 }
 
 void print_device(pcap_if_t *device, int device_name_length) {
+#if defined(PCAP_IF_CONNECTION_STATUS_CONNECTED) && defined(PCAP_IF_CONNECTION_STATUS_CONNECTED)
     printf("%*s %5c %12c %11c\n",
            device_name_length, device->name,
            (device->flags & PCAP_IF_UP) ? 'Y' : 'N',
            (device->flags & PCAP_IF_CONNECTION_STATUS_CONNECTED) ? 'Y' : 'N',
            (device->flags & PCAP_IF_WIRELESS) ? 'Y' : 'N');
+#else
+    printf("%*s %5c %12c %11c\n",
+           device_name_length, device->name,
+           (device->flags & PCAP_IF_UP) ? 'Y' : 'N',
+           'X',
+           'X');
+#endif
 }
 
 int list_devices() {
