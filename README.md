@@ -8,7 +8,9 @@ An Homemade packet sniffer
 This project was carried out as part of the CO892 Advanced Network Security module at the University of Kent.
 
 #### Project information
-Student ID: 19909342
+- Student ID: 19909342
+- Student login: adbk2
+- Filter used for out.pcap: `tcp port 443`
 
 #### Build instruction
 
@@ -34,12 +36,13 @@ make
 
 ##### With docker
 
-Building from source
+###### Building from source
 ```bash
 docker build -t sniffer .
 ```
 
-Pulling pre-built image
+###### Pulling pre-built image
+Alternatively, a pre-built image is available on [docker hub](https://hub.docker.com/repository/docker/arthurknoep/sniffer)
 ```bash
 docker pull arthurknoep/sniffer
 ```
