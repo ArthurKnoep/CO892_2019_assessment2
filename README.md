@@ -2,6 +2,9 @@ Assessment #2
 =============
 An Homemade packet sniffer
 --------------------------
+
+![](https://img.shields.io/docker/v/arthurknoep/sniffer)
+
 This project was carried out as part of the CO892 Advanced Network Security module at the University of Kent.
 
 #### Project information
@@ -31,14 +34,21 @@ make
 
 ##### With docker
 
-Buildings
+Building from source
 ```bash
 docker build -t sniffer .
+```
+
+Pulling pre-built image
+```bash
+docker pull arthurknoep/sniffer
 ```
 
 Usage
 ```bash
 docker run --net host --rm sniffer
+# Alternatively, if you use my pre-built image
+docker run --net host --rm arthurknoep/sniffer
 
 # Example usage
 docker run --net host --rm sniffer -l
