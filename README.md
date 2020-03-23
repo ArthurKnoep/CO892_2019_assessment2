@@ -9,6 +9,8 @@ Student ID: 19909342
 
 #### Build instruction
 
+##### With cmake
+
 This project require the `lib_pcap` in order to compile and run. Install it before continuing.
 
 ```bash
@@ -16,7 +18,7 @@ This project require the `lib_pcap` in order to compile and run. Install it befo
 apt install libpcap-dev cmake build-essential
 
 ## For Fedora 
-dnf install libpcap-devel
+dnf install libpcap-devel cmake make automake gcc gcc-c++ kernel-devel
 ```
 
 Building:
@@ -25,6 +27,22 @@ mkdir build
 cd build/
 cmake ..
 make
+```
+
+##### With docker
+
+Buildings
+```bash
+docker build -t sniffer .
+```
+
+Usage
+```bash
+docker run --net host --rm sniffer
+
+# Example usage
+docker run --net host --rm sniffer -l
+docker run --net host --rm -v `pwd`/out:/out sniffer -s wlp2s0 -o /out/cap.pcap
 ```
 
 #### Usage
