@@ -3,7 +3,7 @@ Assessment #2
 An Homemade packet sniffer
 --------------------------
 
-![https://hub.docker.com/r/arthurknoep/sniffer](https://img.shields.io/docker/v/arthurknoep/sniffer)
+![GitHub issues](https://img.shields.io/github/issues/ArthurKnoep/CO892_2019_assessment2) ![https://hub.docker.com/r/arthurknoep/sniffer](https://img.shields.io/docker/v/arthurknoep/sniffer)
 
 This project was carried out as part of the CO892 Advanced Network Security module at the University of Kent.
 
@@ -11,6 +11,7 @@ This project was carried out as part of the CO892 Advanced Network Security modu
 - Student ID: 19909342
 - Student login: adbk2
 - Filter used for out.pcap: `tcp port 443`
+- Originally compiled with gcc 9.2.1 on Ubuntu 19.10
 
 #### Build instruction
 
